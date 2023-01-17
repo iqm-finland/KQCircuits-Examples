@@ -1,0 +1,20 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+
+  lint:
+    runs-on: ubuntu-latest
+    container: ghcr.io/iqm-finland/kqcircuits
+    steps:
+      - uses: actions/checkout@v3
+      - run: pip install -r requirements.txt
+      - name: Run pylint on notebooks
+        run: nbqa pylint notebooks/ --disable="W0104,C0103" --rcfile=/kqc/.pylintrc
