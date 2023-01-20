@@ -29,9 +29,13 @@ pip install -r requirements.txt
 ### Docker
 
 A Dockerfile is provided (the same is used in Binder).
-The image may be run with, for example
+The image may be built with
 ```bash
-docker run -it --rm -p 8888:8888 THE-IMAGE jupyter notebook --NotebookApp.default_url=/lab/ --ip=0.0.0.0 --port=8888
+docker build -f Dockerfile.dev -t kqc-examples .
+```
+and run with, for example
+```bash
+docker run -it --rm -p 8888:8888 kqc-examples jupyter notebook --NotebookApp.default_url=/lab/ --ip=0.0.0.0 --port=8888
 ```
 to get the same view as Binder.
 
