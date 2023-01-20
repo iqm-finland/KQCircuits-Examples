@@ -1,1 +1,1 @@
-FROM ghcr.io/iqm-finland/KQCircuits-Examples:main
+FROM ghcr.io/iqm-finland/kqcircuits-examples:main
