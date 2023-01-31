@@ -1,3 +1,6 @@
+.. meta::
+    :scope: notebooks_in_docs
+
 .. _kqcircuits_examples:
 
 ..
