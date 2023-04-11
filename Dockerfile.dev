@@ -1,4 +1,4 @@
-FROM ghcr.io/iqm-finland/kqcircuits:v4.6.1
+FROM ghcr.io/iqm-finland/kqcircuits:v4.6.12
 
 ARG NB_USER=nb
 ARG NB_UID=1000
